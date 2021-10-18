@@ -1,0 +1,56 @@
+function countSheeps(arrayOfSheep) {
+  let count = 0
+ 
+  arrayOfSheep.forEach( element => {
+    if(element == true){
+      count ++
+    }
+  });
+     return count
+  }
+                      
+'('
+
+/**
+ * @param {string} s
+ * @return {number}
+ // saber la equivalencia de cada valor
+ // Saber que recibimos 
+ // Recorrer 
+ // Validar
+ // 
+ */
+
+function extraer(peticion){
+    const tabla = {
+        I : 1,
+        V : 5,
+        X : 10,
+        L: 50,
+        C : 100,
+        D : 500,
+        M :1000,
+    };
+return tabla[peticion];
+    }
+
+
+const romanToInt = function(s) {
+    let result = 0;
+    let  index= 0;
+    
+while(index < s.length){
+   if(index +1 < s.length & extraer(s[index]) < extraer(s[index+1])) {
+       result += extraer(s[index+1])-extraer(s[index])
+       index += 2;
+   }else{
+       result += extraer(s[index])
+       index += 1
+   }
+   
+}
+    return result;
+}
+
+
+console.log(extraer('M'))
