@@ -1,12 +1,14 @@
 const getRoute = require('./Lib/type-route.js')
-const showFiles =require('./Lib/show-content.js')
+const mdFiles =require('./Lib/md-files.js')
+const showLinks = require('./Lib/links.js')
 
 const route = process.argv[2]
 
 
 
 const routes = getRoute.typeRoute(route)
-const show = showFiles.getFiles(routes)
+const mdFiles = mdFiles.getFiles(routes)
+const links = showLinks.getLinks(mdFiles) 
 
 console.log(show)
 
