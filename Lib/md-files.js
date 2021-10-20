@@ -17,7 +17,7 @@ function getFiles (route){
             allFiles.push(route)
         }
     }
-return allFiles 
+ return allFiles
 }
 
 module.exports.getFiles = getFiles
