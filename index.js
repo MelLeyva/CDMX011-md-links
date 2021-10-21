@@ -4,13 +4,10 @@ const showLinks = require('./Lib/links.js')
 
 
 const route = process.argv[2]
-const fileMd = process.argv[3]
-
-
 
 const routes = getRoute.typeRoute(route)
 const filesTypeMd = mdFiles.getFiles(routes)
-const links = showLinks.getLinks(filesTypeMd, fileMd) 
+const links = showLinks.getLinks(filesTypeMd) 
 
 
 console.log(links)

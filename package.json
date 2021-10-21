@@ -5,10 +5,10 @@
   "scripts": {
     "test": "jest --watchAll"
   },
-  "dependencies": {
-    
-  },
+  "dependencies": {},
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "jsdom": "^18.0.0",
+    "marked": "^3.0.7"
   }
 }
