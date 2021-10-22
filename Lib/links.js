@@ -13,14 +13,16 @@ function getLinks (allFiles){
         const aTarget = dom.window.document.querySelectorAll("a")
         //console.log(aTarget)
         aTarget.forEach( a => {
-            let enlaces = a.getAttribute('href');
-            array.push(enlaces)
-        
+            let URL = a.getAttribute('href');
+            // let URL = a.href;
+            let title = a.textContent
+            if(!URL.startsWith('#')){
+            array.push({href: URL, text: title, file: file})
+            }
         })
     })
      return array
     
 }
-
 
 module.exports.getLinks = getLinks
