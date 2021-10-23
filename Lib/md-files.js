@@ -12,10 +12,9 @@ function getFiles (route){
         })
     } 
     else{
-        if (fileOrDir.isFile() === true){
-           if (extpath.extname(route) === '.md' || extpath.extname(route) === '.markdown' || extpath.extname(route) === '.mdown' )
+        if (extpath.extname(route) === '.md' || extpath.extname(route) === '.markdown' || extpath.extname(route) === '.mdown' )
             allFiles.push(route)
-        }
+    
     }
  return allFiles
 }

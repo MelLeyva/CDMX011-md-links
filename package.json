@@ -5,9 +5,10 @@
   "scripts": {
     "test": "jest --watchAll"
   },
-  "dependencies": {},
+  "dependencies": {
+    "node-fetch": "^2.6.5"
+  },
   "devDependencies": {
-    "gh-pages": "^3.2.3",
     "jsdom": "^18.0.0",
     "marked": "^3.0.7"
   }
