@@ -1,6 +1,7 @@
 {
   "name": "md-links",
   "version": "1.0.0",
+  "main": "index.js",
   "license": "MIT",
   "scripts": {
     "test": "jest --watchAll"
@@ -13,5 +14,8 @@
   "devDependencies": {
     "jsdom": "^18.0.0",
     "marked": "^3.0.7"
+  },
+  "bin": {
+    "md-links": "index.js"
   }
 }
