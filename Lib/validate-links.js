@@ -13,7 +13,7 @@ function validate(array){
             url['statusText'] = 'FAIL'
         }
     } catch (err) { 
-                
+               return err 
     }
     })
     Promise.all(enlaces)
