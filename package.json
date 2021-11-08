@@ -1,15 +1,21 @@
 {
   "name": "md-links",
   "version": "1.0.0",
+  "main": "index.js",
   "license": "MIT",
   "scripts": {
     "test": "jest --watchAll"
   },
   "dependencies": {
+    "chalk": "^4.1.2",
+    "figlet": "^1.5.2",
     "node-fetch": "^2.6.5"
   },
   "devDependencies": {
     "jsdom": "^18.0.0",
     "marked": "^3.0.7"
+  },
+  "bin": {
+    "md-links": "index.js"
   }
 }

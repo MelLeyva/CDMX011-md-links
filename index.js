@@ -1,25 +1,15 @@
-const getRoute = require('./Lib/type-route.js')
-const mdFiles =require('./Lib/md-files.js')
-const showLinks = require('./Lib/links.js')
-const http = require('./Lib/validate-links.js')
+#!/usr/bin/env node
 
+const cli = require("./CLI.js")
+const mdLinks = require("./md-links.js")
+const route = process.argv[2];
+cli.cli()
 
-const route = process.argv[2]
-
-const routes = getRoute.typeRoute(route)
-const filesTypeMd = mdFiles.getFiles(routes)
-const links = showLinks.getLinks(filesTypeMd) 
-
-http.validate(links)
-.then(resolve =>{
-    console.log(resolve)
-})
-.catch(err => {
-    console.log(err)
-})
-
-
-
-
-
-
+mdLinks.mdLinks(route, process.argv[3], process.argv[4])
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+  .finally(() => console.log("All your files have been checked!"));
