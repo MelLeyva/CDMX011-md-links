@@ -1,8 +1,5 @@
-
-
 const chalk = require('chalk')
 const fliget = require('figlet')
-
 
 
 const cli = ()=>{

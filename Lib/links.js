@@ -22,6 +22,7 @@ function getLinks (allFiles){
             }
         })
     })
+    //console.log(array)
      return array
     
 }

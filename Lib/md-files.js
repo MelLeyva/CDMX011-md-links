@@ -13,10 +13,11 @@ function getFiles (route){
     } 
     else{
         if (extpath.extname(route) === '.md' || extpath.extname(route) === '.markdown' || extpath.extname(route) === '.mdown' )
-            allFiles.push(route)
-    
+        allFiles.push(route)
+        
     }
- return allFiles
+    //console.log(allFiles)
+    return allFiles
 }
 
 module.exports.getFiles = getFiles
